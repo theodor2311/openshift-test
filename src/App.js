@@ -1,24 +1,25 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
-      <div class="jumbotron ">
-        <h1 class="display-4">OpenShift Test</h1>
-        <p class="lead">Container Information:</p>
-        <hr class="my-4" />
-        <table class="table">
-          <tbody>
-            <tr>
-              <th scope="row" />
-              <td>Hostname:</td>
-              <td>{process.env.HOSTNAME}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </React.Fragment>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
