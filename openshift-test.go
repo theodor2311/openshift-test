@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -12,5 +13,5 @@ func main() {
 
 // OpenShiftTest Handler
 func OpenShiftTest(res http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(res, "OpenShift Test")
+	fmt.Fprintf(res, "OpenShift Test, Hostname: %s", os.Getenv("HOSTNAME"))
 }
