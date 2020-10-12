@@ -1,0 +1,15 @@
+postsubmits:
+  - name: build-and-push
+    agent: tekton-pipeline
+    decorate: false
+    pipeline_run_spec:
+      pipelineRef:
+        name: openshift-test-build-and-push
+      serviceAccountName: build-bot
+      resources:
+      - name: git-repo
+        resourceRef:
+          name: PROW_IMPLICIT_GIT_REF
+      - name: image
+        resourceRef:
+          name: openshift-test-image
